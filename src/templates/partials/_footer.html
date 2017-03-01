@@ -1,0 +1,35 @@
+{% import "data/data.html" as tests %}
+<!-- BEGIN footer -->
+<footer class="footer">
+	<!-- BEGIN footer__inner -->
+	<div class="footer__inner">
+					
+		<!-- BEGIN footer__left -->
+		<div class="footer__left">
+			<ul class="navigation">
+				{% for test in tests.plant_variety %}
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">{{test.title}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+
+			<ul class="navigation">
+				{% for test in tests.menu_list %}
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">{{test.title}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<!-- END footer__left -->
+		<!-- BEGIN footer__right -->
+		<div class="footer__right">
+			
+		</div>
+		<!-- END footer__right -->
+
+	</div>
+	<!-- END footer__inner -->
+</footer>
+<!-- END footer -->

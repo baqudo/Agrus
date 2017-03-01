@@ -1,0 +1,93 @@
+{% import "data/data.html" as tests %}
+<!-- BEGIN header -->
+<header class="header">
+	<!-- BEGIN header__inner -->
+	<div class="header__inner">
+
+		<!-- BEGIN header__top -->
+		<div class="header__top">
+
+			<a href="#" class="header__logo logo"><img src="img/logo.png" alt="logo"></a>
+
+			<!-- BEGIN header__contacts contacts -->
+			<div class="header__contacts contacts">
+				<ul class="contacts__numbers">{{mixins.icon('phone')}}
+					<li><a class="contacts__number" href="tel:+380972296200">+38 097 229-62-00</a></li>
+					<li><a class="contacts__number" href="tel:+380503522140">+38 050 352-21-40</a></li>
+					<li><a class="contacts__number" href="tel:+380637272211">+38 063 727-22-11</a></li>
+				</ul>
+
+			</div>
+			<!-- END header__contacts contacts -->
+			<!-- BEGIN header__social -->
+			<div class="header__social">
+				<a href="#" class="contacts__link"><i class="icon-skype">sk</i></a>
+				<a href="#" class="contacts__link"><i class="icon-fb">fb</i></a>
+			</div>
+			<!-- END header__social -->
+			<!-- BEGIN header__in -->
+			<div class="header__in">
+
+				<!-- BEGIN header__search -->
+				<div class="header__search">
+					<input type="search" placeholder="Пошук">
+					<input type="submit" >
+				</div>
+				<!-- END header__search -->
+
+				<a href="#" class="sign-in">Вхід</a>
+				<a href="#" class="sign-up">Реєстрація</a>
+			
+			</div>
+			<!-- END header__in -->
+
+			<!-- BEGIN shopping-cart -->
+			<div class="header__shopping-cart shopping-cart">
+				<div class="shopping-cart__goods">Товарів             2</div>
+				<div class="shopping-cart__sum">Сума                  345,00 грн</div>
+				<a href="#" class="shopping-cart__button"><i class="icon-shopping-cart"></i>Замовити</a>
+			</div>
+			<!-- END shopping-cart -->
+		</div>
+		<!-- END header__top -->
+
+
+		<!-- BEGIN header__menu -->
+		<div class="header__menu">
+			<menu class="menu">
+				{% for test in tests.menu_list %}
+
+					<li class="menu__item">
+						<a href="#" class="menu__link">{{test.title}}</a>
+					</li>
+
+				{% endfor %}
+			</menu>
+		</div>
+		<!-- END header__menu -->
+
+		<!-- BEGIN header__info -->
+		<div class="header__info">
+			<h1 class="header__title">Розсадник декоративних рослин №1</h1>
+			<div class="header__text">Вирощуємо листяні, хвойні дерева і чагарники, а також щеплені форми дерев.</div>
+		</div>
+		<!-- END header__info -->
+
+		<!-- BEGIN plant-variety -->
+		<div class="plant-variety">
+			<ul class="plant-variety__list">
+				
+				{% for test in tests.plant_variety %}
+
+					<li class="plant-variety__item">
+						<a href="#" class="plant-variety__link">{{test.title}}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<!-- END plant-variety -->
+
+	</div>
+	<!-- END header__inner -->
+</header>
+<!-- END header -->

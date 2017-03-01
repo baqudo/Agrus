@@ -1,0 +1,76 @@
+.header
+	&__inner
+		max-width: 1170px
+		padding: 0 15px
+		margin: 0 auto 
+	&__top
+		+clr
+	&__logo
+		float: left
+		margin: 20px 25px 20px 0
+	&__contacts
+		float: left
+		margin-top: 30px 
+	&__social
+		float: left
+		margin: 40px 30px 0 15px 
+		a
+			display: block
+	&__in
+		float: left
+		position: relative
+	&__search
+		input[type=search]
+			width: 310px
+			height: 35px
+			padding: 11px 14px 
+			border-radius: 3px 4px 4px 3px
+			border: 1px solid #e6e6e6
+			background-color: #f8f8f8
+		input[type=submit]
+			width: 60px
+			height: 35px
+			border-radius: 3px 4px 4px 3px
+			background-color: #21973f
+			position: absolute
+			top: 0
+			right: 0  
+	&__shopping-cart
+		float: right
+		
+
+.contacts
+	padding-left: 63px - 25px
+	position: relative
+	.icon-phone
+		position: absolute
+		left: 0
+		top: 16px
+		width: 25px 
+		height: 25px 
+		fill: #000
+	&__number
+		color: #494949
+		font-size: 16px
+		font-weight: 500
+		line-height: 22px
+		&:hover
+			text-decoration: none
+			
+
+.menu
+	box-shadow: 0 6px 25px 2px rgba(111, 110, 110, 0.13);
+	border: 2px solid #21973f;
+	font-size: 0
+	padding: 0 10px  
+	&>.menu__item
+		display: inline-block
+		&>.menu__link
+			display: block
+			padding: 12px 15px 
+			color: #4f4e4e
+			font-size: 16px
+			font-weight: 400
+			&:hover
+				font-weight: 500
+				text-decoration: none
