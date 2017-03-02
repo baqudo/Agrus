@@ -6,12 +6,119 @@
 
 .content
 	float: right
-
+	margin-left: 10px 
 
 .choice
 	border-top: 1px solid #e6e6e6
 	border-bottom: 1px solid #e6e6e6
 	padding: 18px 0 12px
+	+clr
 	b
-		font-weight: 500 
+		font-weight: 500
+	&__item
+		display: inline-block
+		position: relative
+		height: 30px
+		border-radius: 20px
+		padding: 0 40px 0 20px
+		background-color: #f8f8f8
+		color: #4f4e4e
+		line-height: 30px
+		&:hover
+			text-decoration: none
+			color: #4f4e4e
+			opacity: 0.4
+	&__about
+		float: right
+		color: #333333
+		line-height: 1.5
+	&__show-items
+		display: inline-block
+	&__sort
+		display: inline-block
+		margin-left: 25px 
+		&:after
+			content: ""
+			display: inline-block
+			position: relative
+			top: -3px
+			left: 0px
+			width: 7px
+			height: 7px
+			transform: rotate(45deg)
+			border-radius: 2px
+			border: 2px solid #4f4e4e
+			border-left-color: transparent
+			border-top-color: transparent
+.pagination
+	display: block
+	padding: 0
+	margin: 40px 0 8px
+	border-radius: 0
+	vertical-align: baseline
+	&__item
+		display: inline-block
+		margin-right: 3px 
+		width: 30px
+		height: 30px
+		border: 1px solid #e6e6e6
+		background-color: #fcfcfc
+		line-height: 30px
+		text-align: center
+		color: #626161
+		font-size: 12px
+		transition: 0.3s
+		&.is-active
+			color: #fefcfc
+			background-color: #21973f
+		&:hover
+			text-decoration: none
+			color: #fefcfc
+			background-color: #21973f
 
+	&__next
+		position: relative
+		margin-left: 9px 
+		&:before
+			content: ""
+			display: inline-block
+			position: relative
+			top: -1px
+			left: -2px
+			width: 8px
+			height: 8px
+			transform: rotate(45deg)
+			border-radius: 2px
+			border: 1px solid #4f4e4e
+			border-left-color: transparent
+			border-bottom-color: transparent
+		&:hover:before
+			border: 2px solid #fefcfc
+			border-left-color: transparent
+			border-bottom-color: transparent
+	&__prev
+		position: relative
+		margin-right: 11px 
+		&:before
+			content: ""
+			display: inline-block
+			position: relative
+			top: -1px
+			left: 2px
+			width: 8px
+			height: 8px
+			border-radius: 2px
+			border: 1px solid #4f4e4e
+			transform: rotate(45deg)
+			border-right-color: transparent
+			border-top-color: transparent
+		&:hover:before
+			border: 2px solid #fefcfc
+			border-right-color: transparent
+			border-top-color: transparent
+
+.icon-close
+	font-size: 8px
+	position: absolute
+	top: 11px 
+	right: 17px 

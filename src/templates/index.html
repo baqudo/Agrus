@@ -6,17 +6,31 @@ title: Agrus
 {% block content %}
 	<!-- BEGIN choice -->
 	<div class="choice">
-		
-		<!-- BEGIN show-items -->
-		<div class="show-items">
-			<b>Показано:</b> 1-9 из 135 товарів
+
+		<!-- BEGIN choice__item -->
+		<a href="" class="choice__item">Квітучі дерева{{mixins.icon('close')}}</a>
+		<!-- END choice__item -->
+		<!-- BEGIN choice__item -->
+		<a href="" class="choice__item">Паркові{{mixins.icon('close')}}</a>
+		<!-- END choice__item -->
+		<!-- BEGIN choice__item -->
+		<a href="" class="choice__item">Міські{{mixins.icon('close')}}</a>
+		<!-- END choice__item -->
+		<!-- BEGIN choice__about -->
+		<div class="choice__about">
+			<!-- BEGIN choice__show-items -->
+			<div class="choice__show-items">
+				<b>Показано:</b> 1-9 из 135 товарів
+			</div>
+			<!-- END choice__show-items -->
+			<!-- BEGIN choice__sort -->
+			<div class="choice__sort">
+				<b>Сортувати:</b>   по новинкам
+			</div>
+			<!-- END choice__sort -->
 		</div>
-		<!-- END show-items -->
-		<!-- BEGIN sort -->
-		<div class="sort">
-			<b>Сортувати:</b>   по новинкам 
-		</div>
-		<!-- END sort -->
+		<!-- END choice__about -->
+
 	</div>
 	<!-- END choice -->
 
@@ -30,6 +44,15 @@ title: Agrus
 
 	</div>
 	<!-- END plants -->
-
+	<!-- BEGIN pagination -->
+	<div class="pagination">
+		<a href="#" class="pagination__item pagination__prev"></a>
+		<a href="#" class="pagination__item is-active">1</a>
+		<a href="#" class="pagination__item">2</a>
+		<a href="#" class="pagination__item">3</a>
+		<a href="#" class="pagination__item">4</a>
+		<a href="#" class="pagination__item pagination__next"></a>
+	</div>
+	<!-- END pagination -->
 
 {% endblock %}

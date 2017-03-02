@@ -34,7 +34,8 @@
 		margin-top: 12px 
 		
 	&__info
-		min-height: 205px 
+		min-height: 205px
+		padding-top: 25px 
 		background-color: $primary-color
 		+cover
 		padding-left: 100px 
@@ -42,11 +43,18 @@
 		color: #ffffff
 		font-size: 30px
 		font-weight: 500
+		line-height: 2.15
+		&:after
+			content: ""
+			display: block
+			width: 135px 
+			border-bottom: 1px solid #a7a7a7
 	&__text
 		color: #ffffff
 		font-size: 18px
 		line-height: 20px
-		
+		max-width: 405px 
+		margin-top: 8px 
 .social
 	&__link
 		margin: 3px 0 12px

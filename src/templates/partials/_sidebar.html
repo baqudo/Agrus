@@ -64,6 +64,99 @@
 	</div>
 	<!-- END filter -->
 
+	<!-- BEGIN filter -->
+	<div class="filter js-filter">
+		<h3 class="filter__name js-filter__button">Сезон цвітіння{{mixins.icon('plus')}}</h3>
+		<!-- BEGIN filter__dropdown -->
+		<div class="filter__dropdown js-filter__dropdown" hidden>
+			{% for test in tests.filter4 %}
+				<label class="filter__label js-filter__label">
+					<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
+				</label>
+			{% endfor %}
+		</div>
+		<!-- END filter__dropdown -->
+	</div>
+	<!-- END filter -->
+	
+	<!-- BEGIN filter -->
+	<div class="filter js-filter">
+		<h3 class="filter__name js-filter__button">Сезон цвітіння{{mixins.icon('plus')}}</h3>
+		<!-- BEGIN filter__dropdown -->
+		<div class="filter__dropdown js-filter__dropdown" hidden>
+			{% for test in tests.filter4 %}
+				<label class="filter__label js-filter__label">
+					<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
+				</label>
+			{% endfor %}
+		</div>
+		<!-- END filter__dropdown -->
+	</div>
+	<!-- END filter -->
+
+	<!-- BEGIN filter -->
+	<div class="filter filter_new">
+		<h3 class="filter__name_new">Нові надходження сезону</h3>
+		
+		<ul class="filter__list">
+		
+			<li class="filter__item">
+				<!-- BEGIN new-plant -->
+				<div class="new-plant">
+					<!-- BEGIN new-plant__top -->
+					<div class="new-plant__top">
+						<div class="new-plant__img" style="background-image: url(img/new-plant.jpg);"></div>
+						<h4 class="new-plant__name">Ялинка колюча формована <span class="new-plant__size">1,6 м</span></h4>
+					</div>
+					<!-- END new-plant__top -->
+					<!-- BEGIN new-plant__bot -->
+					<div class="new-plant__bot">
+						<span class="new-plant__price">869,00 грн</span><a href="#" class="new-plant__more">Детальніше</a>
+					</div>
+					<!-- END new-plant__bot -->
+				</div>
+				<!-- END new-plant -->
+			</li>
+
+			<li class="filter__item">
+				<!-- BEGIN new-plant -->
+				<div class="new-plant">
+					<!-- BEGIN new-plant__top -->
+					<div class="new-plant__top">
+						<div class="new-plant__img" style="background-image: url(img/new-plant.jpg);"></div>
+						<h4 class="new-plant__name">Ялинка колюча формована <span class="new-plant__size">1,6 м</span></h4>
+					</div>
+					<!-- END new-plant__top -->
+					<!-- BEGIN new-plant__bot -->
+					<div class="new-plant__bot">
+						<span class="new-plant__price">869,00 грн</span><a href="#" class="new-plant__more">Детальніше</a>
+					</div>
+					<!-- END new-plant__bot -->
+				</div>
+				<!-- END new-plant -->
+			</li>
+
+			<li class="filter__item">
+				<!-- BEGIN new-plant -->
+				<div class="new-plant">
+					<!-- BEGIN new-plant__top -->
+					<div class="new-plant__top">
+						<div class="new-plant__img" style="background-image: url(img/new-plant.jpg);"></div>
+						<h4 class="new-plant__name">Ялинка колюча формована <span class="new-plant__size">1,6 м</span></h4>
+					</div>
+					<!-- END new-plant__top -->
+					<!-- BEGIN new-plant__bot -->
+					<div class="new-plant__bot">
+						<span class="new-plant__price">869,00 грн</span><a href="#" class="new-plant__more">Детальніше</a>
+					</div>
+					<!-- END new-plant__bot -->
+				</div>
+				<!-- END new-plant -->
+			</li>
+		</ul>
+	</div>
+	<!-- END filter -->
+
 
 
 
