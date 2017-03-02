@@ -27,19 +27,23 @@
             </ul>
           </div>
           <!-- END header__contacts contacts -->
-          <!-- BEGIN header__social -->
-          <div class="header__social"> <a href="#" class="contacts__link"><i class="icon-skype">sk</i></a> <a href="#" class="contacts__link"><i class="icon-fb">fb</i></a> </div>
-          <!-- END header__social -->
+          <!-- BEGIN header__social  social -->
+          <div class="header__social social"> <a href="#" class="social__link"><i class="social__icon" style="background-image: url(../img/icon_skype.png);"></i></a> <a href="#" class="social__link"><i class="social__icon" style="background-image: url(../img/icon_fb.png);"></i></a> </div>
+          <!-- END header__social social -->
           <!-- BEGIN header__in -->
           <div class="header__in">
             <!-- BEGIN header__search -->
-            <div class="header__search"> <input type="search" placeholder="Пошук"> <input type="submit"> </div>
-            <!-- END header__search --><a href="#" class="sign-in">Вхід</a> <a href="#" class="sign-up">Реєстрація</a> </div>
+            <div class="header__search main-search"> <input class="main-search__area" type="search" placeholder="Пошук"> <button class="main-search__btn" type="submit">
+<svg class="icon icon-search"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
+</button> </div>
+            <!-- END header__search --><a href="#" class="header__login sign-in">Вхід</a> <a href="#" class="header__login sign-up">Реєстрація</a> </div>
           <!-- END header__in -->
           <!-- BEGIN shopping-cart -->
           <div class="header__shopping-cart shopping-cart">
-            <div class="shopping-cart__goods">Товарів 2</div>
-            <div class="shopping-cart__sum">Сума 345,00 грн</div> <a href="#" class="shopping-cart__button"><i class="icon-shopping-cart"></i>Замовити</a> </div>
+            <div class="shopping-cart__line"> <span class="shopping-cart__text">Товарів</span> <span class="shopping-cart__quantity">2</span> </div>
+            <div class="shopping-cart__line"> <span class="shopping-cart__text">Сума</span> <span class="shopping-cart__quantity">345,00 грн</span> </div>
+            <a href="#" class="shopping-cart__button"> <svg class="icon icon-shopping-cart"><use xlink:href="img/sprite.svg#icon-shopping-cart"></use></svg> Замовити</a>
+          </div>
           <!-- END shopping-cart -->
         </div>
         <!-- END header__top -->
@@ -60,7 +64,7 @@
         </div>
         <!-- END header__menu -->
         <!-- BEGIN header__info -->
-        <div class="header__info">
+        <div class="header__info" style="background-image:  url('../img/header-bg.jpg')">
           <h1 class="header__title">Розсадник декоративних рослин №1</h1>
           <div class="header__text">Вирощуємо листяні, хвойні дерева і чагарники, а також щеплені форми дерев.</div>
         </div>
@@ -84,42 +88,77 @@
     </header>
     <!-- END header -->
     <!-- BEGIN content -->
-    <div class="out">
-      <h1>Agrus</h1> <svg class="icon icon-facebook"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg> <svg class="icon icon-search"><use xlink:href="img/sprite.svg#icon-search"></use></svg> <svg class="icon icon-plus"><use xlink:href="img/sprite.svg#icon-plus"></use></svg>      </div>
+    <div class="content"> </div>
     <!-- END content -->
     <!-- BEGIN footer -->
-    <footer class="footer">
+    <footer class="footer" style="background-image: url(../img/footer-bg.jpg);">
       <!-- BEGIN footer__inner -->
       <div class="footer__inner">
-        <!-- BEGIN footer__left -->
-        <div class="footer__left">
-          <ul class="navigation">
-            <li class="navigation__item"> <a href="#" class="navigation__link">Широколисті</a> </li>
-            <li class="navigation__item"> <a href="#" class="navigation__link">Хвойні</a> </li>
-            <li class="navigation__item"> <a href="#" class="navigation__link">Дерева</a> </li>
-            <li class="navigation__item"> <a href="#" class="navigation__link">Кущі</a> </li>
-            <li class="navigation__item"> <a href="#" class="navigation__link">Ліани</a> </li>
-            <li class="navigation__item"> <a href="#" class="navigation__link">Квітучі</a> </li>
-            <li class="navigation__item"> <a href="#" class="navigation__link">Вічнозелені</a> </li>
-            <li class="navigation__item"> <a href="#" class="navigation__link">Багаторічні</a> </li>
-          </ul>
-          <ul class="navigation">
-            <li class="navigation__item"> <a href="#" class="navigation__link">Про розсадник</a> </li>
-            <li class="navigation__item"> <a href="#" class="navigation__link">Новини</a> </li>
-            <li class="navigation__item"> <a href="#" class="navigation__link">Статті</a> </li>
-            <li class="navigation__item"> <a href="#" class="navigation__link">Відео</a> </li>
-            <li class="navigation__item"> <a href="#" class="navigation__link">Книги</a> </li>
-            <li class="navigation__item"> <a href="#" class="navigation__link">Супутні товари</a> </li>
-            <li class="navigation__item"> <a href="#" class="navigation__link">Оплата і доставка</a> </li>
-            <li class="navigation__item"> <a href="#" class="navigation__link">Гарантії</a> </li>
-            <li class="navigation__item"> <a href="#" class="navigation__link">Представництва</a> </li>
-            <li class="navigation__item"> <a href="#" class="navigation__link">Контакти</a> </li>
-          </ul>
+        <!-- BEGIN footer__column -->
+        <div class="footer__column">
+          <h3 class="footer__title">Навігація</h3>
+          <!-- BEGIN navigation -->
+          <div class="navigation">
+            <ul class="navigation__list navigation__list_thin">
+              <li class="navigation__item"> <a href="#" class="navigation__link">Широколисті</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Хвойні</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Дерева</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Кущі</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Ліани</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Квітучі</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Вічнозелені</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Багаторічні</a> </li>
+            </ul>
+            <ul class="navigation__list">
+              <li class="navigation__item"> <a href="#" class="navigation__link">Про розсадник</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Новини</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Статті</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Відео</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Книги</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Супутні товари</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Оплата і доставка</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Гарантії</a> </li>
+            </ul>
+            <ul class="navigation__list">
+              <li class="navigation__item"> <a href="#" class="navigation__link">Представництва</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Контакти</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Розпродаж</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Хіти продажів</a> </li>
+              <li class="navigation__item"> <a href="#" class="navigation__link">Нові надходження сезону</a> </li>
+            </ul>
+          </div>
+          <!-- END navigation -->
+          <div class="footer__copy">2017.Всі права захищені законом України.</div>
         </div>
-        <!-- END footer__left -->
-        <!-- BEGIN footer__right -->
-        <div class="footer__right"> </div>
-        <!-- END footer__right -->
+        <!-- END footer__column -->
+        <!-- BEGIN footer__column -->
+        <div class="footer__column">
+          <h3 class="footer__title">Контакти</h3>
+          <!-- BEGIN footer__col -->
+          <div class="footer__col">
+            <!-- BEGIN footer__contacts contacts -->
+            <div class="footer__contacts contacts">
+              <ul class="contacts__numbers"> <svg class="icon icon-phone"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
+                <li><a class="contacts__number" href="tel:+380972296200">+38 097 229-62-00</a></li>
+                <li><a class="contacts__number" href="tel:+380503522140">+38 050 352-21-40</a></li>
+                <li><a class="contacts__number" href="tel:+380637272211">+38 063 727-22-11</a></li>
+              </ul>
+            </div>
+            <!-- END footer__contacts contacts -->
+            <!-- BEGIN footer__contact -->
+            <a class="footer__contact footer__contact_skype" href="#"> <svg class="icon icon-skype"><use xlink:href="img/sprite.svg#icon-skype"></use></svg> pitomnik_agrus</a>
+            <!-- END footer__contact -->
+          </div>
+          <!-- END footer__col -->
+          <!-- BEGIN footer__col -->
+          <div class="footer__col">
+            <!-- BEGIN footer__contact -->
+            <a class="footer__contact footer__contact_mail" href="#"> <svg class="icon icon-mail"><use xlink:href="img/sprite.svg#icon-mail"></use></svg> pitomnik@agrus.ua</a>
+            <!-- END footer__contact -->
+          </div>
+          <!-- END footer__col -->
+        </div>
+        <!-- END footer__column -->
       </div>
       <!-- END footer__inner -->
     </footer>

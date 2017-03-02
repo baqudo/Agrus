@@ -1,0 +1,77 @@
+.footer
+	margin-top: 50px 
+	padding: 30px 0 12px
+	background-color: $primary-color
+	background-size: cover
+	background-position: 50%
+	background-repeat: no-repeat
+	color: #fff 
+	&__inner
+		max-width: 1140px 
+		margin: 0 auto 
+		+clr
+	&__column
+		width: percentage(570/1140) 
+		float: left
+		+clr
+		&:nth-child(2)
+			padding-left: 15px
+	&__title
+		margin-bottom: 25px 
+		color: #fefdfd
+		font-size: 18px
+		font-weight: 500
+		line-height: 18px
+	&__copy
+		color: #fefdfd
+		line-height: 18px
+	&__contacts
+
+		margin-left: 7px
+		margin-bottom: 25px 
+		.contacts__number
+			color: #FFF
+		.icon-phone
+			fill: #fff
+	
+	&__contact
+		position: relative
+		padding-left: 40px
+		margin-left: 6px
+		display: block
+		color: #fefdfd
+		font-size: 16px
+		font-weight: 500
+
+		.icon
+			position: absolute
+			left: 0
+		&_skype
+			line-height: 30px 
+		&_mail
+			line-height: 20px 
+
+		// line-height: 18px
+	&__col
+		width: 224px
+		float: left
+		margin-top: 18px 
+.navigation
+	+clr
+	margin-bottom: 30px 
+	&__list
+		width: percentage(195/570)
+		float: left
+	&__item
+	&__link
+		color: #ffffff
+		font-size: 14px
+		line-height: 24px
+
+.navigation__list_thin
+	width: percentage(180/570)
+	
+.icon-skype
+	font-size: 30px 
+.icon-mail
+	font-size: 20px 
