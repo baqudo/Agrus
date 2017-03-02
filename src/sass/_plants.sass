@@ -1,7 +1,7 @@
 .plants
 	font-size: 0 
 	text-align: center
-	max-width: 846px  
+
 .plant
 	text-align: left
 	width: 222px
@@ -9,8 +9,12 @@
 	margin: 18px 0
 	vertical-align: top
 	font-size: 14px 
+	+r(1080)
+		margin: 10px 
 	&:not(:nth-child(3n))
-		margin-right: 90px 
+		margin-right: percentage(90/846)
+		+r(1080)
+			margin-right: 10px 
 	&__img
 		height: 267px
 	&__desc

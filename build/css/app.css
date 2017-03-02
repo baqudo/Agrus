@@ -177,6 +177,7 @@ body {
 .content {
   float: right;
   margin-left: 10px;
+  max-width: 846px;
 }
 
 .choice {
@@ -573,13 +574,14 @@ body {
 }
 
 .plant-variety {
+  width: 100%;
   box-shadow: 0 6px 8px 1px rgba(114, 114, 114, 0.19);
   border: 1px solid #c1c1c1;
   background-color: #21973f;
 }
 
 .plant-variety__list {
-  text-align: justify;
+  text-align: center;
   padding: 0 10px;
 }
 
@@ -741,7 +743,6 @@ body {
 .plants {
   font-size: 0;
   text-align: center;
-  max-width: 846px;
 }
 
 .plant {
@@ -754,7 +755,7 @@ body {
 }
 
 .plant:not(:nth-child(3n)) {
-  margin-right: 90px;
+  margin-right: 10.6383%;
 }
 
 .plant__img {
@@ -818,8 +819,16 @@ body {
 }
 
 .sidebar {
+  position: relative;
   float: left;
   width: 195px;
+  *zoom: 1;
+}
+
+.sidebar:after {
+  content: " ";
+  display: table;
+  clear: both;
 }
 
 .sale {
@@ -859,6 +868,7 @@ body {
 }
 
 .filter {
+  position: relative;
   margin: 10px 0;
 }
 
@@ -1016,6 +1026,56 @@ body {
 
 .icon-plus {
   font-size: 13px;
+}
+
+@media only screen and (max-width: 1170px) {
+
+  .plant-variety__link {
+    padding: 0 1em;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+
+  .content {
+    max-width: 100%;
+  }
+
+  .plant {
+    margin: 10px;
+  }
+
+  .plant:not(:nth-child(3n)) {
+    margin-right: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar > * {
+    display: inline-block;
+    min-height: 52px;
+    margin: 5px;
+  }
+
+  .sidebar .filter__dropdown {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    background-color: #f8f8f8;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+
+  .header__contacts {
+    display: none;
+  }
+
+  .header__social {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
