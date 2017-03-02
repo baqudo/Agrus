@@ -1,3 +1,4 @@
+{% import "data/filters.html" as tests %}
 <!-- BEGIN sidebar -->
 <div class="sidebar">
 	<a href="#" class="sale">РОЗПРОДАЖ{{mixins.icon('arrow-right')}}</a>
@@ -8,82 +9,61 @@
 		<h3 class="filter__name js-filter__button">Назва категорії{{mixins.icon('plus')}}</h3>
 		<!-- BEGIN filter__dropdown -->
 		<div class="filter__dropdown js-filter__dropdown">
-
+			{% for test in tests.filter1 %}
 				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">Паркові   (35)
+					<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
 				</label>
-
-				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">Алейні   (17)
-				</label>
-
-				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">Міські   (45)
-				</label>
-
-				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">Бордюрні  (34)
-				</label>
-
-				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">Для огорожі   (29)
-				</label>
-
-				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">Для аеропортів   (63)
-				</label>
-
+			{% endfor %}
 		</div>
 		<!-- END filter__dropdown -->
-
 	</div>
 	<!-- END filter -->
-
-
 
 	<!-- BEGIN filter -->
 	<div class="filter js-filter">
 		<h3 class="filter__name js-filter__button">Назва категорії{{mixins.icon('plus')}}</h3>
 		<!-- BEGIN filter__dropdown -->
 		<div class="filter__dropdown js-filter__dropdown">
-
+			{% for test in tests.filter2 %}
 				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">Квітучі  (35)
+					<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
 				</label>
-
-				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">Плакучі  (17)
-				</label>
-
-				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">Вітрозахисні   (45)
-				</label>
-
-				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">Грунтопокривні  (34)
-				</label>
-
-				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">Протирозійні   (29)
-				</label>
-
-				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">Рокарні   (63)
-				</label>
-
-				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">Лікарські   (63)
-				</label>
-
-				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">Їстівні   (63)
-				</label>
-
+			{% endfor %}
 		</div>
 		<!-- END filter__dropdown -->
-
 	</div>
 	<!-- END filter -->
+
+	<!-- BEGIN filter -->
+	<div class="filter js-filter">
+		<h3 class="filter__name js-filter__button">Темп росту{{mixins.icon('plus')}}</h3>
+		<!-- BEGIN filter__dropdown -->
+		<div class="filter__dropdown js-filter__dropdown">
+			{% for test in tests.filter3 %}
+				<label class="filter__label js-filter__label">
+					<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
+				</label>
+			{% endfor %}
+		</div>
+		<!-- END filter__dropdown -->
+	</div>
+	<!-- END filter -->
+
+	<!-- BEGIN filter -->
+	<div class="filter js-filter">
+		<h3 class="filter__name js-filter__button">Сезон цвітіння{{mixins.icon('plus')}}</h3>
+		<!-- BEGIN filter__dropdown -->
+		<div class="filter__dropdown js-filter__dropdown">
+			{% for test in tests.filter4 %}
+				<label class="filter__label js-filter__label">
+					<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
+				</label>
+			{% endfor %}
+		</div>
+		<!-- END filter__dropdown -->
+	</div>
+	<!-- END filter -->
+
 
 
 

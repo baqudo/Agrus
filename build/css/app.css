@@ -698,6 +698,7 @@ body {
 }
 
 .filter__name {
+  position: relative;
   width: 195px;
   height: 48px;
   padding: 14px 0 14px 23px;
@@ -708,6 +709,12 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.2;
+}
+
+.filter__name .icon-plus {
+  position: absolute;
+  top: 18px;
+  right: 14px;
 }
 
 .filter__name:hover {
