@@ -1,0 +1,58 @@
+.plants
+	font-size: 0 
+	text-align: center
+	max-width: 846px  
+.plant
+	text-align: left
+	width: 222px
+	display: inline-block
+	margin: 18px 0
+	vertical-align: top
+	font-size: 14px 
+	&:not(:nth-child(3n))
+		margin-right: 90px 
+	&__img
+		height: 267px
+	&__desc
+		padding: 15px 
+		border: 1px solid #e6e6e6
+		background-color: #fcfcfc
+	&__title
+		color: #484747
+		font-size: 16px
+		font-weight: 700
+		line-height: 20px
+		&_latin
+			padding: 10px 0
+			color: #4f4e4e
+			font-size: 14px
+			font-weight: 500
+			font-style: italic
+			line-height: 15px
+			border-bottom: 1px solid #e0dcdc
+	&__about
+		padding: 10px 0
+		font-size: 14px 
+		color: #4f4e4e
+		line-height: 15px
+		border-bottom: 1px solid #e0dcdc
+		&:before
+			content: ""
+			display: inline-block
+			position: relative
+			top: -2px 
+			margin-right: 9px 
+			width: 6px
+			height: 6px
+			border: 1px solid #4f4e4e
+			transform: rotate(45deg)
+			border-left-color: transparent
+			border-bottom-color: transparent
+
+	&__price
+		display: block
+		margin: 10px auto
+		text-align: center
+		color: #484747
+		font-size: 16px
+		font-weight: 700

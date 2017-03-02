@@ -4,27 +4,32 @@ title: Agrus
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	
-	{# variable example #}
-	{# <h1>{{title}}</h1> #}
-
-	
-	{# partial example #}
-
-
-	{# mixin example #}
-{# 	{{mixins.icon('facebook')}}
-	{{mixins.icon('search')}}
-	{{mixins.icon('plus')}}
-	 #}
-
-
-	{# data usage example #}
-{# 		{% import "data/data.html" as tests %}
+	<!-- BEGIN choice -->
+	<div class="choice">
 		
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
-		{% endfor %} #}
-	{# end of example #}
+		<!-- BEGIN show-items -->
+		<div class="show-items">
+			<b>Показано:</b> 1-9 из 135 товарів
+		</div>
+		<!-- END show-items -->
+		<!-- BEGIN sort -->
+		<div class="sort">
+			<b>Сортувати:</b>   по новинкам 
+		</div>
+		<!-- END sort -->
+	</div>
+	<!-- END choice -->
+
+	<!-- BEGIN plants -->
+	<div class="plants">
+
+	{% include "partials/_plants.html" %}
+	{% include "partials/_plants.html" %}
+	{% include "partials/_plants.html" %}
+
+
+	</div>
+	<!-- END plants -->
+
 
 {% endblock %}
