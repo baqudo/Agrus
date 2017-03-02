@@ -72,6 +72,10 @@ html {
   box-sizing: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
 .icon-close {
   width: 1em;
   height: 1em;
