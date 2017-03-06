@@ -1,15 +1,20 @@
 .main
+	position: relative
 	+clr
 	max-width: 1170px
 	padding: 0 15px 
 	margin: 47px auto 0
-
+	+r(1080)
+		padding: 0 5px
+		margin: 10px auto 0
 .content
 	float: right
 	margin-left: 10px 
 	max-width: 846px
 	+r(1080)
 		max-width: 100%
+		margin-left: 0 
+		float: none
 .choice
 	border-top: 1px solid #e6e6e6
 	border-bottom: 1px solid #e6e6e6
@@ -49,11 +54,16 @@
 		float: right
 		color: #333333
 		line-height: 1.4
+		+r(405)
+			float: none
 	&__show-items
 		display: inline-block
 	&__sort
 		display: inline-block
 		margin-left: 25px 
+		+r(405)
+			display: block
+			margin-left: 0
 
 .pagination
 	display: block

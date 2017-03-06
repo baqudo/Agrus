@@ -1,163 +1,169 @@
 {% import "data/filters.html" as tests %}
 <!-- BEGIN sidebar -->
 <div class="sidebar">
-	<a href="#" class="sale">РОЗПРОДАЖ{{mixins.icon('arrow-right')}}</a>
-	<a href="#" class="bestsellers">Хіти продажів</a>
-
-	<!-- BEGIN filter -->
-	<div class="filter js-filter">
-		<h3 class="filter__name js-filter__button">Назва категорії{{mixins.icon('plus')}}</h3>
-		<!-- BEGIN filter__dropdown -->
-		<div class="filter__dropdown js-filter__dropdown">
-			{% for test in tests.filter1 %}
-				<label class="filter__label js-filter__label" data-title="{{test.data_title}}">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
-				</label>
-			{% endfor %}
-		</div>
-		<!-- END filter__dropdown -->
-	</div>
-	<!-- END filter -->
-
-	<!-- BEGIN filter -->
-	<div class="filter js-filter">
-		<h3 class="filter__name js-filter__button">Назва категорії{{mixins.icon('plus')}}</h3>
-		<!-- BEGIN filter__dropdown -->
-		<div class="filter__dropdown js-filter__dropdown">
-			{% for test in tests.filter2 %}
-				<label class="filter__label js-filter__label" data-title="{{test.data_title}}">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
-				</label>
-			{% endfor %}
-		</div>
-		<!-- END filter__dropdown -->
-	</div>
-	<!-- END filter -->
-
-	<!-- BEGIN filter -->
-	<div class="filter js-filter">
-		<h3 class="filter__name js-filter__button">Темп росту{{mixins.icon('plus')}}</h3>
-		<!-- BEGIN filter__dropdown -->
-		<div class="filter__dropdown js-filter__dropdown">
-			{% for test in tests.filter3 %}
-				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
-				</label>
-			{% endfor %}
-		</div>
-		<!-- END filter__dropdown -->
-	</div>
-	<!-- END filter -->
-
-	<!-- BEGIN filter -->
-	<div class="filter js-filter">
-		<h3 class="filter__name js-filter__button">Сезон цвітіння{{mixins.icon('plus')}}</h3>
-		<!-- BEGIN filter__dropdown -->
-		<div class="filter__dropdown js-filter__dropdown">
-			{% for test in tests.filter4 %}
-				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
-				</label>
-			{% endfor %}
-		</div>
-		<!-- END filter__dropdown -->
-	</div>
-	<!-- END filter -->
-
-	<!-- BEGIN filter -->
-	<div class="filter js-filter">
-		<h3 class="filter__name js-filter__button">Сезон цвітіння{{mixins.icon('plus')}}</h3>
-		<!-- BEGIN filter__dropdown -->
-		<div class="filter__dropdown js-filter__dropdown" hidden>
-			{% for test in tests.filter4 %}
-				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
-				</label>
-			{% endfor %}
-		</div>
-		<!-- END filter__dropdown -->
-	</div>
-	<!-- END filter -->
+	<button class="primary-button filter-trigger js-filter-trigger">Фильтры</button>
+	<!-- BEGIN filters-box -->
+	<div class="filters-box js-filters-box">
 	
-	<!-- BEGIN filter -->
-	<div class="filter js-filter">
-		<h3 class="filter__name js-filter__button">Сезон цвітіння{{mixins.icon('plus')}}</h3>
-		<!-- BEGIN filter__dropdown -->
-		<div class="filter__dropdown js-filter__dropdown" hidden>
-			{% for test in tests.filter4 %}
-				<label class="filter__label js-filter__label">
-					<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
-				</label>
-			{% endfor %}
+		<a href="#" class="sale">РОЗПРОДАЖ{{mixins.icon('arrow-right')}}</a>
+		<a href="#" class="bestsellers">Хіти продажів</a>
+
+
+		<!-- BEGIN filter -->
+		<div class="filter js-filter">
+			<h3 class="filter__name js-filter__button">Назва категорії{{mixins.icon('plus')}}</h3>
+			<!-- BEGIN filter__dropdown -->
+			<div class="filter__dropdown js-filter__dropdown">
+				{% for test in tests.filter1 %}
+					<label class="filter__label js-filter__label" data-title="{{test.data_title}}">
+						<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
+					</label>
+				{% endfor %}
+			</div>
+			<!-- END filter__dropdown -->
 		</div>
-		<!-- END filter__dropdown -->
-	</div>
-	<!-- END filter -->
+		<!-- END filter -->
 
-	<!-- BEGIN filter -->
-	<div class="filter filter_new">
-		<h3 class="filter__name_new">Нові надходження сезону</h3>
+		<!-- BEGIN filter -->
+		<div class="filter js-filter">
+			<h3 class="filter__name js-filter__button">Назва категорії{{mixins.icon('plus')}}</h3>
+			<!-- BEGIN filter__dropdown -->
+			<div class="filter__dropdown js-filter__dropdown">
+				{% for test in tests.filter2 %}
+					<label class="filter__label js-filter__label" data-title="{{test.data_title}}">
+						<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
+					</label>
+				{% endfor %}
+			</div>
+			<!-- END filter__dropdown -->
+		</div>
+		<!-- END filter -->
+
+		<!-- BEGIN filter -->
+		<div class="filter js-filter">
+			<h3 class="filter__name js-filter__button">Темп росту{{mixins.icon('plus')}}</h3>
+			<!-- BEGIN filter__dropdown -->
+			<div class="filter__dropdown js-filter__dropdown">
+				{% for test in tests.filter3 %}
+					<label class="filter__label js-filter__label">
+						<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
+					</label>
+				{% endfor %}
+			</div>
+			<!-- END filter__dropdown -->
+		</div>
+		<!-- END filter -->
+
+		<!-- BEGIN filter -->
+		<div class="filter js-filter">
+			<h3 class="filter__name js-filter__button">Сезон цвітіння{{mixins.icon('plus')}}</h3>
+			<!-- BEGIN filter__dropdown -->
+			<div class="filter__dropdown js-filter__dropdown">
+				{% for test in tests.filter4 %}
+					<label class="filter__label js-filter__label">
+						<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
+					</label>
+				{% endfor %}
+			</div>
+			<!-- END filter__dropdown -->
+		</div>
+		<!-- END filter -->
+
+		<!-- BEGIN filter -->
+		<div class="filter js-filter">
+			<h3 class="filter__name js-filter__button">Сезон цвітіння{{mixins.icon('plus')}}</h3>
+			<!-- BEGIN filter__dropdown -->
+			<div class="filter__dropdown js-filter__dropdown" hidden>
+				{% for test in tests.filter4 %}
+					<label class="filter__label js-filter__label">
+						<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
+					</label>
+				{% endfor %}
+			</div>
+			<!-- END filter__dropdown -->
+		</div>
+		<!-- END filter -->
 		
-		<ul class="filter__list">
-		
-			<li class="filter__item">
-				<!-- BEGIN new-plant -->
-				<div class="new-plant">
-					<!-- BEGIN new-plant__top -->
-					<div class="new-plant__top">
-						<div class="new-plant__img" style="background-image: url(img/new-plant.jpg);"></div>
-						<h4 class="new-plant__name">Ялинка колюча формована <span class="new-plant__size">1,6 м</span></h4>
-					</div>
-					<!-- END new-plant__top -->
-					<!-- BEGIN new-plant__bot -->
-					<div class="new-plant__bot">
-						<span class="new-plant__price">869,00 грн</span><a href="#" class="new-plant__more">Детальніше</a>
-					</div>
-					<!-- END new-plant__bot -->
-				</div>
-				<!-- END new-plant -->
-			</li>
+		<!-- BEGIN filter -->
+		<div class="filter js-filter">
+			<h3 class="filter__name js-filter__button">Сезон цвітіння{{mixins.icon('plus')}}</h3>
+			<!-- BEGIN filter__dropdown -->
+			<div class="filter__dropdown js-filter__dropdown" hidden>
+				{% for test in tests.filter4 %}
+					<label class="filter__label js-filter__label">
+						<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
+					</label>
+				{% endfor %}
+			</div>
+			<!-- END filter__dropdown -->
+		</div>
+		<!-- END filter -->
 
-			<li class="filter__item">
-				<!-- BEGIN new-plant -->
-				<div class="new-plant">
-					<!-- BEGIN new-plant__top -->
-					<div class="new-plant__top">
-						<div class="new-plant__img" style="background-image: url(img/new-plant.jpg);"></div>
-						<h4 class="new-plant__name">Ялинка колюча формована <span class="new-plant__size">1,6 м</span></h4>
+		<!-- BEGIN filter -->
+		<div class="filter filter_new">
+			<h3 class="filter__name_new">Нові надходження сезону</h3>
+			
+			<ul class="filter__list">
+			
+				<li class="filter__item">
+					<!-- BEGIN new-plant -->
+					<div class="new-plant">
+						<!-- BEGIN new-plant__top -->
+						<div class="new-plant__top">
+							<div class="new-plant__img" style="background-image: url(img/new-plant.jpg);"></div>
+							<h4 class="new-plant__name">Ялинка колюча формована <span class="new-plant__size">1,6 м</span></h4>
+						</div>
+						<!-- END new-plant__top -->
+						<!-- BEGIN new-plant__bot -->
+						<div class="new-plant__bot">
+							<span class="new-plant__price">869,00 грн</span><a href="#" class="new-plant__more">Детальніше</a>
+						</div>
+						<!-- END new-plant__bot -->
 					</div>
-					<!-- END new-plant__top -->
-					<!-- BEGIN new-plant__bot -->
-					<div class="new-plant__bot">
-						<span class="new-plant__price">869,00 грн</span><a href="#" class="new-plant__more">Детальніше</a>
-					</div>
-					<!-- END new-plant__bot -->
-				</div>
-				<!-- END new-plant -->
-			</li>
+					<!-- END new-plant -->
+				</li>
 
-			<li class="filter__item">
-				<!-- BEGIN new-plant -->
-				<div class="new-plant">
-					<!-- BEGIN new-plant__top -->
-					<div class="new-plant__top">
-						<div class="new-plant__img" style="background-image: url(img/new-plant.jpg);"></div>
-						<h4 class="new-plant__name">Ялинка колюча формована <span class="new-plant__size">1,6 м</span></h4>
+				<li class="filter__item">
+					<!-- BEGIN new-plant -->
+					<div class="new-plant">
+						<!-- BEGIN new-plant__top -->
+						<div class="new-plant__top">
+							<div class="new-plant__img" style="background-image: url(img/new-plant.jpg);"></div>
+							<h4 class="new-plant__name">Ялинка колюча формована <span class="new-plant__size">1,6 м</span></h4>
+						</div>
+						<!-- END new-plant__top -->
+						<!-- BEGIN new-plant__bot -->
+						<div class="new-plant__bot">
+							<span class="new-plant__price">869,00 грн</span><a href="#" class="new-plant__more">Детальніше</a>
+						</div>
+						<!-- END new-plant__bot -->
 					</div>
-					<!-- END new-plant__top -->
-					<!-- BEGIN new-plant__bot -->
-					<div class="new-plant__bot">
-						<span class="new-plant__price">869,00 грн</span><a href="#" class="new-plant__more">Детальніше</a>
+					<!-- END new-plant -->
+				</li>
+
+				<li class="filter__item">
+					<!-- BEGIN new-plant -->
+					<div class="new-plant">
+						<!-- BEGIN new-plant__top -->
+						<div class="new-plant__top">
+							<div class="new-plant__img" style="background-image: url(img/new-plant.jpg);"></div>
+							<h4 class="new-plant__name">Ялинка колюча формована <span class="new-plant__size">1,6 м</span></h4>
+						</div>
+						<!-- END new-plant__top -->
+						<!-- BEGIN new-plant__bot -->
+						<div class="new-plant__bot">
+							<span class="new-plant__price">869,00 грн</span><a href="#" class="new-plant__more">Детальніше</a>
+						</div>
+						<!-- END new-plant__bot -->
 					</div>
-					<!-- END new-plant__bot -->
-				</div>
-				<!-- END new-plant -->
-			</li>
-		</ul>
+					<!-- END new-plant -->
+				</li>
+			</ul>
+		</div>
+		<!-- END filter -->
+
 	</div>
-	<!-- END filter -->
-
-
+	<!-- END filters-box -->
 
 
 </div>

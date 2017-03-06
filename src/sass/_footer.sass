@@ -17,6 +17,10 @@
 		+clr
 		&:nth-child(2)
 			padding-left: 15px
+		+r(1025)
+			width: 100% 
+			&:nth-child(2)
+				padding-left: 0
 	&__title
 		margin-bottom: 25px 
 		color: #fefdfd
@@ -24,6 +28,9 @@
 		font-weight: 500
 		line-height: 18px
 	&__copy
+		max-width: 1170px 
+		padding: 0 15px 
+		margin: 15px auto 0
 		color: #fefdfd
 		line-height: 18px
 	&__contacts
@@ -59,16 +66,20 @@
 		margin-top: 18px 
 .navigation
 	+clr
-	margin-bottom: 30px 
+	margin-bottom: 15px 
 	&__list
 		width: percentage(195/570)
 		float: left
+		+r(420)
+			width: 100%
+			text-align: center 
 	&__item
 	&__link
 		color: #ffffff
 		font-size: 14px
 		line-height: 24px
-
+		+r(420)
+			display: block
 .navigation__list_thin
 	width: percentage(180/570)
 	

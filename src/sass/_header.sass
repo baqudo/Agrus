@@ -3,27 +3,44 @@
 		max-width: 1170px
 		padding: 0 15px
 		margin: 0 auto 
+		+r(1025)
+			padding: 0
 	&__top
 		+clr
 	&__logo
 		float: left
 		margin: 20px 25px 20px 0
+		+r(1005)
+			margin: 20px 5px 20px 0
+		+r(610)
+			float: none
 	&__contacts
 		margin-left: 12px 
 		float: left
 		margin-top: 30px 
-		+r(1050)
+		+r(1005)
 			display: none
 	&__social
 		float: left
 		margin: 53px 105px 0 21px 
-		+r(1050)
+		+r(1100)
+			margin: 53px 15px 0 21px 
+		+r(1005)
+			margin: 53px 10px 0 5px 
+		+r(825)
 			display: none
 	&__in
 		float: left
 		position: relative
+		+clr
+		+r(610)
+			float: none
+			max-width: 95%
+			margin: 12px auto 0
 	&__search
 		margin-top: 29px
+		+r(825)
+			margin-top: 10px 
 	&__login
 		display: inline-block
 		color: #4b4b4b
@@ -37,9 +54,19 @@
 	&__shopping-cart
 		float: right
 		margin-top: 12px 
-		
+		+r(1025)
+			margin-right: 5px 
+		+r(825)
+			margin: 5px
+		+r(610)
+			float: none
+			position: absolute
+			top: 0
+			right: 0 
 	&__info
-		min-height: 205px
+		font-size: 30px
+		+css-lock(20,30,480,1140)
+		min-height: em(205,30)
 		padding-top: 25px 
 		background-color: $primary-color
 		+cover
@@ -47,12 +74,15 @@
 		+r(1080)
 			padding-top: 0
 			padding-left: 20px 
-			min-height: 150px
+			min-height: em(150,30)
 	&__title
 		color: #ffffff
 		font-size: 30px
+		+css-lock(20,30,480,1140)
 		font-weight: 500
 		line-height: 2.15
+		+r(610)
+			line-height: 1.5 
 		&:after
 			content: ""
 			display: block
@@ -61,9 +91,12 @@
 	&__text
 		color: #ffffff
 		font-size: 18px
-		line-height: 20px
+		+css-lock(14,18,480,1140)
+		line-height: em(20,18)
 		max-width: 405px 
 		margin-top: 8px 
+		+r(610)
+			padding-bottom: 5px 
 .social
 	&__link
 		display: block
@@ -76,6 +109,7 @@
 // ------------main-search------------
 .main-search
 	position: relative
+	
 .main-search__area
 	width: 305px
 	height: 35px
@@ -83,6 +117,10 @@
 	border-radius: 3px 4px 4px 3px
 	border: 1px solid #e6e6e6
 	background-color: #f8f8f8
+	+r(825)
+		width: auto
+	+r(610)
+		width: 100% 
 .main-search__btn
 	width: 60px
 	height: 35px
@@ -119,6 +157,12 @@
 	padding: 10px 
 	border-radius: 3px
 	border: 2px solid $primary-color
+	+r(825)
+		width: 170px 
+		height: auto
+	+r(610)
+		width: 150px 
+		padding: 5px 5px 10px 
 	&__line
 		position: relative
 		color: #333333
@@ -133,6 +177,10 @@
 		left: 85px 
 		display: inline-block
 		font-size: 16px
+		+r(825)
+			top: 0
+			left: auto
+			right: 0  
 	&__button
 		position: relative
 		display: block
@@ -143,6 +191,10 @@
 		font-size: 16px
 		font-weight: 700
 		line-height: 18px
+		+r(825)
+			margin-top: 0
+			top: 4px
+			line-height: 1 
 		.icon-shopping-cart
 			position: absolute
 			top: 2px 
@@ -151,10 +203,11 @@
 			text-decoration: none
 //-----------------menu------------------
 .menu
-	box-shadow: 0 6px 25px 2px rgba(111, 110, 110, 0.13);
-	border: 2px solid $primary-color;
+	box-shadow: 0 6px 25px 2px rgba(111, 110, 110, 0.13)
+	border: 2px solid $primary-color
 	font-size: 0
-	padding: 0 10px  
+	padding: 0 10px
+
 	&__item
 		display: inline-block
 		&:first-child a
@@ -173,7 +226,35 @@
 			color: #4f4e4e
 			font-weight: 500
 			text-decoration: none
-	
+
++r(1025)
+	.menu
+		padding: 0
+		display: none
+		position: absolute
+		z-index: 10 
+		width: 100% 
+		background-color: #fff 
+		&__item
+			display: block
+			text-align: center
+			&:first-child a
+				display: none
+		&__link
+			&:hover, &:focus
+				color: #fff
+				font-weight: 500
+				text-decoration: none
+				background-color: $primary-color 
+
+
+.menu-trigger
+	display: none
+	float: right
+	position: relative
+	top: -4px 
+	+r(1025)
+		display: inline-block
 
 // plant-variety
 .plant-variety
@@ -181,6 +262,8 @@
 	box-shadow: 0 6px 8px 1px rgba(114, 114, 114, 0.19)
 	border: 1px solid #c1c1c1
 	background-color: #21973f
+	+r(715)
+		display: none
 	&__list
 		text-align: center
 		padding: 0 10px 
@@ -199,6 +282,7 @@
 		padding: 0 34px
 		color: #ffffff
 		font-size: 16px
+		+css-lock(14,16,480,1025)
 		font-weight: 500
 		line-height: 49px
 		+r(1170)
@@ -207,3 +291,12 @@
 			padding: 0 10px 
 		&:hover
 			text-decoration: none
+
+.logo
+	+r(825)
+		margin: 0 -20px 0 -35px 
+	&__img
+		max-width: 100%
+		max-height: 100%  
+		+r(825)
+			+scale(0.7)

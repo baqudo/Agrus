@@ -1,40 +1,40 @@
 .sidebar
 	position: relative
 	float: left
-	width: 195px
+	min-width: 195px
 	+clr
 	+r(1080)
-		display: none
-		// width: 100% 
-		// & > *
-		// 	display: inline-block
-		// 	min-height: 52px
-		// 	margin: 5px
-		// .filter__dropdown
-		// 	display: none
-		// 	position: absolute
-		// 	z-index: 99
-		// 	width: 100% 
-		// 	background-color: #f8f8f8
+		border: 2px solid $primary-color
+		border-left: none
+		float: none
+		padding: 0 10px 
 
+		position: absolute
+		top: 61px
+		left: -235px
+		z-index: 11
+		background-color: #fff
+		transition: 0.5s
+		&.is-open
+			left: 0 
 .sale
 	display: block
 	margin: 9px 0 16px
 	text-align: center
-	width: 195px
 	min-height: 48px
 	border-radius: 3px 4px 4px 3px
 	border: 2px solid #21973f
 	color: #4f4e4e
 	font-weight: 500
 	line-height: 48px
+
 	&:hover
 		text-decoration: none
 
 .bestsellers
 	display: block
 	margin: 10px 0
-	width: 195px
+
 	min-height: 48px
 	line-height: 48px
 	text-align: center 
@@ -44,16 +44,29 @@
 	color: #ffffff
 	font-size: 16px
 	font-weight: 500
+
 	&:hover
 		text-decoration: none
 
+.filter-trigger
+	display: none
+	margin: 0
+	position: absolute
+	z-index: 99 
+	top: 20%
+	left: 200px
+	border-bottom-left-radius: 0
+	border-bottom-right-radius: 0
+	transform: rotate(90deg)
+	+r(1080)
+		display: block
 
 .filter
 	position: relative
 	margin: 10px 0
 .filter__name
 	position: relative
-	width: 195px
+	width: 100%
 	min-height: 48px
 	padding: 14px 0 14px 23px
 	border-radius: 3px 4px 4px 3px

@@ -60,3 +60,32 @@ $(function () {
 
 	}
 });
+
+$(function () {
+	var $menuTrigger = $('.js-menu-trigger'),
+			$menu = $('.js-menu'),
+			$menuLink = $menu.children().children();
+
+	$menuTrigger.on('click', function () {
+		$menu.slideToggle(300);
+	})
+
+	$menu.on('click', $menuLink, function (e) {
+		e.preventDefault();
+
+		$menu.slideUp(300);
+	});
+
+	$(window).resize(function	() {
+		var wid = $(window).width();
+		if(wid > 1025 && $menu.is(':hidden')) {
+			$menu.removeAttr('style');
+		}
+	});
+});
+
+$(document).ready(function(){
+	$('.sidebar .filter-trigger').click(function(){
+		$('.sidebar').toggleClass('is-open');
+	});
+});

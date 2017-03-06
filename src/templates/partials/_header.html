@@ -7,7 +7,7 @@
 		<!-- BEGIN header__top -->
 		<div class="header__top">
 
-			<a href="#" class="header__logo logo"><img src="img/logo.png" alt="logo"></a>
+			<a href="#" class="header__logo logo"><img class="logo__img" src="img/logo.png" alt="logo"></a>
 
 			<!-- BEGIN header__contacts contacts -->
 			<div class="header__contacts contacts">
@@ -37,7 +37,7 @@
 
 				<a href="#" class="header__login sign-in">Вхід</a>
 				<a href="#" class="header__login sign-up">Реєстрація</a>
-			
+				<button class="primary-button menu-trigger js-menu-trigger">Меню</button>
 			</div>
 			<!-- END header__in -->
 
@@ -63,7 +63,7 @@
 
 		<!-- BEGIN header__menu -->
 		<div class="header__menu">
-			<menu class="menu">
+			<ul class="menu js-menu">
 					<li class="menu__item">
 						<a href="#" class="menu__link" style="background-image: url(img/home.png);"></a>
 					</li>
@@ -75,7 +75,7 @@
 					</li>
 
 				{% endfor %}
-			</menu>
+			</ul>
 		</div>
 		<!-- END header__menu -->
 
