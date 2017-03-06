@@ -1392,7 +1392,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 610px) {
+@media only screen and (max-width: 620px) {
 
   .header__logo {
     float: none;
