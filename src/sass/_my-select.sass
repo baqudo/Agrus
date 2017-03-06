@@ -1,0 +1,46 @@
+$width: 195px
+
+.select
+	display: inline-block
+.select__bar
+	position: relative
+	cursor: pointer
+	&:after
+		content: ""
+		display: inline-block
+		position: relative
+		top: -3px
+		left: 3px
+		width: 7px
+		height: 7px
+		transform: rotate(45deg)
+		border-radius: 2px
+		border: 2px solid #4f4e4e
+		border-left-color: transparent
+		border-top-color: transparent
+.js-select
+	display: none
+
+.select__dropdown 
+	position: absolute
+	z-index: 5 
+	display: none
+	max-height: 200px
+	overflow: auto
+	background-color: #ffffff
+	padding: 15px 0
+	border: 1px solid #e6e6e6
+	background-color: #f8f8f8
+	color: #4f4e4e
+	&.is-active
+		color: #000
+	.option
+		position: relative
+		display: block
+		padding: 0 15px
+		&:hover
+			cursor: pointer
+			background-color: #ccc
+	&:last-child
+		padding-bottom: 20px  
+
