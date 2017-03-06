@@ -759,6 +759,13 @@ body {
 .navigation__list {
   width: 34.21053%;
   float: left;
+  *zoom: 1;
+}
+
+.navigation__list:after {
+  content: " ";
+  display: table;
+  clear: both;
 }
 
 .navigation__link {
@@ -1452,7 +1459,11 @@ body {
 
   .navigation__list {
     width: 100%;
-    text-align: center;
+  }
+
+  .navigation__item {
+    float: left;
+    width: 50%;
   }
 
   .navigation__link {
