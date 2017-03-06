@@ -5,6 +5,7 @@
 .plant
 	text-align: left
 	width: 222px
+
 	display: inline-block
 	margin: 18px 0
 	vertical-align: top
@@ -16,9 +17,30 @@
 		+r(1080)
 			margin-right: 10px 
 	&__img
+		position: relative
 		height: 267px
+		&:before, &:after
+			content: ""
+			position: absolute
+			width: 100%
+			height: 100%
+			transition: 0.6s
+			opacity: 0 
+		&:before
+
+			background-color: rgb(33, 151, 63) 
+		&:after
+			background: url(../img/search-plus.svg) no-repeat center
+		&:hover
+			&:after
+				opacity: 1; 
+			&:before
+				opacity: 0.78;
 	&__desc
+		width: 100% 
+		display: table
 		padding: 15px 
+		min-height: 220px 
 		border: 1px solid #e6e6e6
 		background-color: #fcfcfc
 	&__title
@@ -52,9 +74,10 @@
 			transform: rotate(45deg)
 			border-left-color: transparent
 			border-bottom-color: transparent
-
+	&__bottom
+		width: 100% 
+		display: table-footer-group
 	&__price
-		display: block
 		margin: 10px auto
 		text-align: center
 		color: #484747

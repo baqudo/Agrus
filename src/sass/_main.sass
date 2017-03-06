@@ -13,11 +13,22 @@
 .choice
 	border-top: 1px solid #e6e6e6
 	border-bottom: 1px solid #e6e6e6
-	padding: 18px 0 12px
+	padding: 12px 0
 	+clr
 	b
 		font-weight: 500
+	&__items
+		font-size: 0 
+		display: inline-block
+		+r(820)
+			display: block
+			width: 100%
+			margin-bottom: 20px  
 	&__item
+		font-size: 14px 
+		margin: 0 
+		margin-top: 6px
+		margin-right: 6px 
 		display: inline-block
 		position: relative
 		height: 30px
@@ -26,14 +37,18 @@
 		background-color: #f8f8f8
 		color: #4f4e4e
 		line-height: 30px
+		background-image: url(../img/close.svg)
+		background-repeat: no-repeat
+		background-position: right 17px center
 		&:hover
-			text-decoration: none
+			cursor: pointer
 			color: #4f4e4e
 			opacity: 0.4
 	&__about
+		margin: 10px 0 7px
 		float: right
 		color: #333333
-		line-height: 1.5
+		line-height: 1.4
 	&__show-items
 		display: inline-block
 	&__sort
@@ -46,6 +61,7 @@
 	margin: 40px 0 8px
 	border-radius: 0
 	vertical-align: baseline
+	text-align: center
 	&__item
 		display: inline-block
 		margin-right: 3px 

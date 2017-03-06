@@ -8,7 +8,7 @@ $(document).ready(function () {
 		var select = $(this),
 		    opt_len = select.children('option').length,
 		    className = select.attr('class').replace('js-select', ''),
-		    timer = 500;
+		    timer = 300;
 
 		// оборачиваем селект в див
 		select.wrap('<div class="select ' + className + '"></div>');

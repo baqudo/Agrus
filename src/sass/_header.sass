@@ -9,13 +9,14 @@
 		float: left
 		margin: 20px 25px 20px 0
 	&__contacts
+		margin-left: 12px 
 		float: left
 		margin-top: 30px 
 		+r(1050)
 			display: none
 	&__social
 		float: left
-		margin: 40px 30px 0 15px 
+		margin: 53px 105px 0 21px 
 		+r(1050)
 			display: none
 	&__in
@@ -42,7 +43,11 @@
 		padding-top: 25px 
 		background-color: $primary-color
 		+cover
-		padding-left: 100px 
+		padding-left: 100px
+		+r(1080)
+			padding-top: 0
+			padding-left: 20px 
+			min-height: 150px
 	&__title
 		color: #ffffff
 		font-size: 30px
@@ -61,7 +66,6 @@
 		margin-top: 8px 
 .social
 	&__link
-		margin: 3px 0 12px
 		display: block
 	&__icon
 		display: inline-block
@@ -73,7 +77,7 @@
 .main-search
 	position: relative
 .main-search__area
-	width: 310px
+	width: 305px
 	height: 35px
 	padding: 11px 65px 11px 14px 
 	border-radius: 3px 4px 4px 3px
@@ -93,7 +97,6 @@
 		top: 2px 
 
 .contacts
-	padding-left: 63px - 25px
 	position: relative
 	.icon-phone
 		position: absolute
@@ -152,18 +155,25 @@
 	border: 2px solid $primary-color;
 	font-size: 0
 	padding: 0 10px  
-	&>.menu__item
+	&__item
 		display: inline-block
-		&>.menu__link
-			display: block
-			padding: 12px 15px 
+		&:first-child a
+			padding: 12px 25px 
+			position: relative
+			top: 8px 
+	&__link
+		display: block
+		padding: 12px 15px 
+		color: #4f4e4e
+		font-size: 16px
+		font-weight: 400
+		background-repeat: no-repeat
+		background-position: center
+		&:hover, &:focus
 			color: #4f4e4e
-			font-size: 16px
-			font-weight: 400
-			&:hover
-				font-weight: 500
-				text-decoration: none
-
+			font-weight: 500
+			text-decoration: none
+	
 
 // plant-variety
 .plant-variety
@@ -193,5 +203,7 @@
 		line-height: 49px
 		+r(1170)
 			padding: 0 1em
+		+r(875)
+			padding: 0 10px 
 		&:hover
 			text-decoration: none

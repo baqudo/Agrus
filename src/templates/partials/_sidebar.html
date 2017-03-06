@@ -10,7 +10,7 @@
 		<!-- BEGIN filter__dropdown -->
 		<div class="filter__dropdown js-filter__dropdown">
 			{% for test in tests.filter1 %}
-				<label class="filter__label js-filter__label">
+				<label class="filter__label js-filter__label" data-title="{{test.data_title}}">
 					<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
 				</label>
 			{% endfor %}
@@ -25,7 +25,7 @@
 		<!-- BEGIN filter__dropdown -->
 		<div class="filter__dropdown js-filter__dropdown">
 			{% for test in tests.filter2 %}
-				<label class="filter__label js-filter__label">
+				<label class="filter__label js-filter__label" data-title="{{test.data_title}}">
 					<input type="checkbox" class="filter__checkbox js-filter__checkbox">{{test.title}}
 				</label>
 			{% endfor %}

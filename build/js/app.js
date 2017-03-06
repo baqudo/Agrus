@@ -2756,7 +2756,7 @@ $(document).ready(function () {
 		var select = $(this),
 		    opt_len = select.children('option').length,
 		    className = select.attr('class').replace('js-select', ''),
-		    timer = 500;
+		    timer = 300;
 
 		// оборачиваем селект в див
 		select.wrap('<div class="select ' + className + '"></div>');
@@ -2829,8 +2829,12 @@ $(document).ready(function () {
 sayHello();
 
 $(function () {
-	var $filter = $('.js-filter');
-	var duration = 300;
+	var $filter = $('.js-filter'),
+	    $filterList = $('.js-filter__list'),
+	    $filterListItems = $filterList.children('.js-filter-choice-remove'),
+	    duration = 300;
+
+	$filterListItems.on('click', removeChoice);
 
 	$filter.each(function () {
 		var $this = $(this),
@@ -2851,8 +2855,25 @@ $(function () {
 
 	function changeActivity() {
 		var $this = $(this),
-		    $parentLabel = $this.parent();
+		    $parentLabel = $this.parent(),
+		    $parentText = $parentLabel.data('title');
 
 		$parentLabel.toggleClass('is-checked');
+
+		if ($parentLabel.hasClass('is-checked')) {
+			$('<span class="choice__item js-filter-choice-remove" data-title="' + $parentText + '">' + $parentText + '</span>').appendTo($filterList);
+			$('.choice__item').on('click', removeChoice);
+		} else {
+			$('span.js-filter-choice-remove[data-title="' + $parentText + '"]').remove();
+		}
+	}
+
+	function removeChoice() {
+		var $this = $(this);
+		// console.log($this);
+		$this.remove();
+		var $title = $this.data('title');
+		var $label = $('.js-filter__label[data-title="' + $title + '"]');
+		$label.removeClass('is-checked');
 	}
 });
