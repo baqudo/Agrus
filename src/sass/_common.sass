@@ -32,26 +32,24 @@ body
 
 .primary-arrow-btn
 	position: relative
-	// min-width: 195px
-	padding: 12px 3.33em
-	border-radius: 3px 4px 4px 3px
-	border: 1px solid #e6e6e6
+	min-width: 195px
+	padding: 12px
+	border-radius: 3px
 	background-color: $primary-color
 	color: #ffffff
 	font-size: 16px
 	font-weight: 500
 	&:after
 		content: ""
-		transform: rotate(45deg)
-		display: inline-block
+		display: block
 		position: absolute
 		top: 6px
-		right: -16px 
-		width: 34px
-		height: 34px
-		border-radius: 3px 4px 4px 3px
-		// border: 1px solid #e6e6e6
-		background-color: $primary-color
+		right: -15px 
+		border: 17px solid $primary-color
+		border-left-color: transparent
+		border-bottom-color: transparent
+		border-radius: 3px
+		transform: rotate(45deg)
 
 .primary-title
 	position: relative
@@ -76,7 +74,7 @@ body
 
 .primary-form
 	width: 100% 
-	max-width: 310px 
+
 .primary-label
 	display: block
 	color: #4f4e4e
@@ -92,3 +90,40 @@ body
 	background-color: #f8f8f8
 .primary-textarea
 	border-radius: 9px
+
+
+
+
+
+
+.slick-prev,
+.slick-next 
+	position: absolute
+	z-index: 99 
+	display: block
+	height: 12px
+	width: 12px
+	line-height: 1
+	font-size: 24px
+	cursor: pointer
+	background: transparent
+	color: transparent
+	top: 30%
+	margin-top: -10px
+	padding: 0
+	border: 2px solid #000
+	transform: rotate(45deg)
+	&:hover, &:focus 
+		opacity: 0.75 
+	&:before
+		display: none
+.slick-disabled
+	opacity: 0.25
+.slick-prev
+	left: 3px
+	border-top-color: transparent
+	border-right-color: transparent
+.slick-next
+	right: 3px
+	border-bottom-color: transparent
+	border-left-color: transparent

@@ -20,6 +20,7 @@
   {% include "partials/_footer.html" %}
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
+    {% if showMap %}
     <!-- подключать инлайном после основного скрипта -->
     <script>
       /*begin map*/
@@ -75,6 +76,7 @@
       /*end map*/
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA04VMqMvV-ifF4mtvOnsUkf3Lw9F9ivAg&callback=initMap" type="text/javascript"></script>
+    {% endif %}
     <!-- END scripts -->
 
   </body>

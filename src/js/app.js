@@ -6,51 +6,14 @@
 //=include my-select.js
 
 var slickOpt = {
+  infinite: false,
   slidesToShow: 4,
   responsive: [
     {
-      breakpoint: 945,
+      breakpoint: 1025,
       settings: {
         arrows: false,
-        centerMode: true,
-        centerPadding: '50px',
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 845,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '100px',
-        slidesToShow: 2
-      }
-    },
-    {
-      breakpoint: 690,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '50px',
-        slidesToShow: 2
-      }
-    },
-    {
-      breakpoint: 580,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '0px',
-        slidesToShow: 2
-      }
-    },
-    {
-      breakpoint: 490,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '100px',
-        slidesToShow: 1
+        variableWidth: true
       }
     },
     {
@@ -59,6 +22,7 @@ var slickOpt = {
         arrows: false,
         centerMode: true,
         centerPadding: '60px',
+        variableWidth: true,
         slidesToShow: 1
       }
     },
@@ -68,6 +32,7 @@ var slickOpt = {
         arrows: false,
         centerMode: true,
         centerPadding: '30px',
+        variableWidth: true,
         slidesToShow: 1
       }
     }

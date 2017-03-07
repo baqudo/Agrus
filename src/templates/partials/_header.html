@@ -41,6 +41,7 @@
 			</div>
 			<!-- END header__in -->
 
+			{% if showCart %}
 			<!-- BEGIN shopping-cart -->
 			<div class="header__shopping-cart shopping-cart">
 
@@ -57,6 +58,7 @@
 				<a href="#" class="shopping-cart__button">{{mixins.icon('shopping-cart')}}Замовити</a>
 			</div>
 			<!-- END shopping-cart -->
+			{% endif %}
 		</div>
 		<!-- END header__top -->
 

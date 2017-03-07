@@ -1,0 +1,89 @@
+---
+title: Agrus contacts
+showCart: false
+showMap: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+		
+		<!-- BEGIN contacts -->
+		<div class="contacts">
+			<!-- BEGIN wrapper -->
+			<div class="wrapper">
+				<h2 class="primary-title"><i class="fa fa-map-marker" aria-hidden="true"></i>Контакти</h2>
+				<!-- BEGIN contacts__inner -->
+				<div class="contacts__inner">
+					<!-- BEGIN contacts__left -->
+					<div class="contacts__left">
+						<!-- BEGIN contacts__info -->
+						<div class="contacts__info">
+							<!-- BEGIN contacts__list -->
+							<ul class="contacts__list">
+								<h3 class="contacts__title">Контакти</h3>
+								<li><b>Роздрібні продажі:</b> 050-332-26-41</li>
+								<li><b>Оптові продажі:</b> 050-332-26-41</li>
+								<li><b>E-mail:</b> pitomnik@agrus.ua</li>
+								<li><b>Web:</b> www.agrus.ua</li>
+								<li><b>Skype:</b> pitomnik_agrus</li>
+							</ul>
+							<!-- END contacts__list -->
+
+							<!-- BEGIN contacts__list -->
+							<ul class="contacts__list">
+								<h3 class="contacts__title">Режим роботи</h3>
+								<li>Будні дні: 900- 1800</li>
+								<li>Субота: 900- 1800</li>
+								<li>Неділя: вихідний</li>
+							</ul>
+							<!-- END contacts__list -->
+
+							<!-- BEGIN contacts__list -->
+							<ul class="contacts__list">
+								<h3 class="contacts__title">Проїзд</h3>
+								<p>З Варшавського шосе доїхати до Бородянки, далі через Андріївку, в Липівці повернути праворуч за вказівником "Королівка, Кодра, Забуянье".</p>
+							</ul>
+							<!-- END contacts__list -->
+						</div>
+						<!-- END contacts__info -->
+
+						<!-- BEGIN contacts__map -->
+						<div class="contacts__map">
+							<div id="map"></div>
+						</div>
+						<!-- END contacts__map -->
+
+					</div>
+					<!-- END contacts__left -->
+
+					<!-- BEGIN contacts__right -->
+					<div class="contacts__right">
+						<h3 class="contacts__title">Зворотній зв’зок</h3>
+						<form action="#" method="get" class="primary-form">
+							<label for="" class="primary-label">Ім’я <sup>*</sup>
+								<input type="text" class="primary-input">
+							</label>
+							<label for="" class="primary-label">E-mail <sup>*</sup>
+								<input type="email" class="primary-input">
+							</label>
+							<label for="" class="primary-label">Телефон <sup>*</sup>
+								<input type="tel" class="primary-input" placeholder="+380">
+							</label>
+							<label for="" class="primary-label">Текст повідомлення
+								<textarea class="primary-textarea" rows="5"></textarea>
+							</label>
+							<button type="submit" class="primary-arrow-btn contacts__submit">Відправити</button>
+						</form>
+					</div>
+					<!-- END contacts__right -->
+				</div>
+				<!-- END contacts__inner -->
+			</div>
+			<!-- END wrapper -->
+
+		</div>
+		<!-- END contacts -->
+
+		{% include "partials/_recomended-products.html" %}
+
+{% endblock %}
