@@ -1,24 +1,33 @@
 .plants
 	font-size: 0 
 	text-align: center
-
-.plant
-	text-align: left
-	width: 222px
-
-	display: inline-block
-	margin: 18px 0
-	vertical-align: top
-	font-size: 14px 
-	+r(1080)
-		margin: 10px 
-	&:not(:nth-child(3n))
+	.plant
+		text-align: left
+		display: inline-block
+		&:not(:nth-child(3n))
 		margin-right: percentage(90/846)
 		+r(1080)
 			margin-right: 10px 
+
+.plant
+	display: block
+	// min-width: 222px
+	margin: 18px 0
+	vertical-align: top
+	font-size: 14px
+	&:hover
+		text-decoration: none
+	+r(1080)
+		margin: 10px 
+
 	&__img
 		position: relative
 		height: 267px
+		max-width: 100%
+		max-height: 100%  
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
 		&:before, &:after
 			content: ""
 			position: absolute
@@ -83,3 +92,11 @@
 		color: #484747
 		font-size: 16px
 		font-weight: 700
+
+
+.slider
+	overflow: hidden
+	.plant
+		margin: 10px 28px
+		+r(1105)
+			margin: 10px 

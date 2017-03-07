@@ -1,4 +1,7 @@
 .header
+	margin-bottom: 50px 
+	+r(1025)
+		margin-bottom: 20px 
 	&__inner
 		max-width: 1170px
 		padding: 0 15px
@@ -14,21 +17,28 @@
 			margin: 20px 5px 20px 0
 		+r(620)
 			float: none
-	&__contacts
+	&__telephone
 		margin-left: 12px 
 		float: left
 		margin-top: 30px 
 		+r(1005)
 			display: none
-	&__social
+	&__social-links
 		float: left
 		margin: 53px 105px 0 21px 
+		font-size: 16px 
 		+r(1100)
 			margin: 53px 15px 0 21px 
 		+r(1005)
 			margin: 53px 10px 0 5px 
 		+r(825)
 			display: none
+	&__social-link
+		display: block
+		font-size: 18px
+		line-height: 18px 
+		color: #000
+
 	&__in
 		float: left
 		position: relative
@@ -98,15 +108,8 @@
 		margin-top: 8px 
 		+r(620)
 			padding-bottom: 5px 
-.social
-	&__link
-		display: block
-	&__icon
-		display: inline-block
-		width: 16px
-		height: 16px
-		background-repeat: no-repeat
-		background-position: center 
+
+			
 // ------------main-search------------
 .main-search
 	position: relative
@@ -135,7 +138,7 @@
 		position: relative
 		top: 2px 
 
-.contacts
+.telephone
 	position: relative
 	.icon-phone
 		position: absolute

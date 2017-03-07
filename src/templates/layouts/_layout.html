@@ -20,6 +20,61 @@
   {% include "partials/_footer.html" %}
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
+    <!-- подключать инлайном после основного скрипта -->
+    <script>
+      /*begin map*/
+      var map;
+      var initMap = function()
+      {
+        map = new google.maps.Map(document.getElementById('map'),
+        {
+          center:
+          {
+            lat: 50.4440374,
+            lng: 30.3602129
+          },
+          zoom: 17,
+          scrollwheel: false
+        });
+        setMarkers(map, places);
+      }
+      var places = [
+        ['Агрус', 50.4440374, 30.3601829,]
+      ];
+      function setMarkers(map)
+      {
+        var marker, i;
+        for (i = 0; i < places.length; i++)
+        {
+          var description = places[i][0]
+          var lat = places[i][1]
+          var long = places[i][2]
+          var img = places[i][3]
+          var latshort = places[i][1].toFixed(5);
+          var longshort = places[i][2].toFixed(5);
+          latlngset = new google.maps.LatLng(lat, long);
+          marker = new google.maps.Marker(
+          {
+            position: latlngset,
+            map: map,
+            icon: img
+          });
+          // центр карты п по маркеру  map.setCenter(marker.getPosition());
+          /*закомментить если не нужны всплывающие окна
+          var content = "<div class='map-marker-wrapper'><p class='map-marker-descr'>" +description +"</p>" + "<span class='map-marker-coord'>" + latshort + ", " + longshort  + "</span></div>";
+          var infowindow = new google.maps.InfoWindow();
+          google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+            return function() {
+              infowindow.setContent(content);
+              infowindow.open(map,marker);
+            };
+          })(marker,content,infowindow)); 
+          закомментить если не нужны всплывающие окна*/
+        }
+      }
+      /*end map*/
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA04VMqMvV-ifF4mtvOnsUkf3Lw9F9ivAg&callback=initMap" type="text/javascript"></script>
     <!-- END scripts -->
 
   </body>

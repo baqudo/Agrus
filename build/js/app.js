@@ -2826,7 +2826,72 @@ $(document).ready(function () {
 	});
 });
 
+var slickOpt = {
+	slidesToShow: 4,
+	responsive: [{
+		breakpoint: 945,
+		settings: {
+			arrows: false,
+			centerMode: true,
+			centerPadding: '50px',
+			slidesToShow: 3
+		}
+	}, {
+		breakpoint: 845,
+		settings: {
+			arrows: false,
+			centerMode: true,
+			centerPadding: '100px',
+			slidesToShow: 2
+		}
+	}, {
+		breakpoint: 690,
+		settings: {
+			arrows: false,
+			centerMode: true,
+			centerPadding: '50px',
+			slidesToShow: 2
+		}
+	}, {
+		breakpoint: 580,
+		settings: {
+			arrows: false,
+			centerMode: true,
+			centerPadding: '0px',
+			slidesToShow: 2
+		}
+	}, {
+		breakpoint: 490,
+		settings: {
+			arrows: false,
+			centerMode: true,
+			centerPadding: '100px',
+			slidesToShow: 1
+		}
+	}, {
+		breakpoint: 445,
+		settings: {
+			arrows: false,
+			centerMode: true,
+			centerPadding: '60px',
+			slidesToShow: 1
+		}
+	}, {
+		breakpoint: 365,
+		settings: {
+			arrows: false,
+			centerMode: true,
+			centerPadding: '30px',
+			slidesToShow: 1
+		}
+	}]
+};
+
 sayHello();
+
+$(function () {
+	$('.js-slider').slick(slickOpt);
+});
 
 $(function () {
 	var $filter = $('.js-filter'),

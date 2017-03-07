@@ -1,0 +1,72 @@
+---
+title: Agrus
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<!-- BEGIN main -->
+<div class="main">
+	{# <button class="primary-button filter-trigger js-filter-trigger">Фильтры</button> #}
+	{% include "partials/_sidebar.html" %}
+	<!-- BEGIN content -->
+	<div class="content">
+		<!-- BEGIN choice -->
+		<div class="choice">
+			<!-- BEGIN choice__items -->
+			<div class="choice__items js-filter__list">
+				<span class="choice__item js-filter-choice-remove">Квітучі дерева</span>
+				<span class="choice__item js-filter-choice-remove">Паркові</span>
+				<span class="choice__item js-filter-choice-remove">Міські</span>
+			</div>
+			<!-- END choice__items -->
+
+			<!-- BEGIN choice__about -->
+			<div class="choice__about">
+				<!-- BEGIN choice__show-items -->
+				<div class="choice__show-items">
+					<b>Показано:</b> 1-9 из 135 товарів
+				</div>
+				<!-- END choice__show-items -->
+				<!-- BEGIN choice__sort -->
+				<div class="choice__sort">
+					<b>Сортувати:</b>
+					<select name="sort" class="sort js-select">
+						<option value="new">по новинкам</option>
+						<option value="prive">по цене</option>
+						<option value="a-z">от А до Я</option>
+						<option value="z-a">от Я до А</option>
+					</select>
+				</div>
+				<!-- END choice__sort -->
+			</div>
+			<!-- END choice__about -->
+
+		</div>
+		<!-- END choice -->
+
+		<!-- BEGIN plants -->
+		<div class="plants">
+
+		{% include "partials/_plants.html" %}
+		{% include "partials/_plants.html" %}
+		{% include "partials/_plants.html" %}
+
+
+		</div>
+		<!-- END plants -->
+		<!-- BEGIN pagination -->
+		<div class="pagination">
+			<a href="#" class="pagination__item pagination__prev"></a>
+			<a href="#" class="pagination__item is-active">1</a>
+			<a href="#" class="pagination__item">2</a>
+			<a href="#" class="pagination__item">3</a>
+			<a href="#" class="pagination__item">4</a>
+			<a href="#" class="pagination__item pagination__next"></a>
+		</div>
+		<!-- END pagination -->
+
+	</div>
+	<!-- END content -->
+</div>
+<!-- END main -->
+{% endblock %}

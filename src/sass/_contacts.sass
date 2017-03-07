@@ -1,0 +1,58 @@
+.contacts
+	color: #3e3e3e
+	margin-bottom: 85px 
+	+r(980)
+		margin-bottom: 20px 
+.contacts__inner
+	+clr
+.contacts__left
+	max-width: 764px 
+	width: percentage(764/1140)
+	float: left
+	+r(980)
+		float: none
+		max-width: 100%
+		width: 100%  
+.contacts__right
+	float: right
+	max-width: 310px 
+	margin-left: 10px 
+	+r(980)
+		float: none
+		margin: 0 auto
+.contacts__title
+	font-size: 18px
+	+css-lock(16,18,480,1140)
+	font-weight: 500
+	margin-bottom: em(12,18)
+	margin-top: em(30,18)
+.contacts__info
+	+clr
+	+r(980)
+		padding-left: 10px 
+.contacts__list
+	float: left
+	max-width: 260px 
+	font-size: 16px
+	+css-lock(14,16,480,1140)
+	&:not(:last-child)
+		margin-right: em(50,16)
+	li
+		line-height: em(30,16)
+	b
+		font-weight: 500
+	p
+		line-height: em(24,16)
+
+.contacts__map
+	margin-top: 25px 
+	height: 269px
+	border: 1px solid #a7a7a7
+	background-color: #e6e6e6
+	+r(980)
+		width: 100% 
+#map
+	height: 269px 
+
+.contacts__submit
+	margin-top: 10px 
