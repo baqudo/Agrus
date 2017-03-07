@@ -1,63 +1,92 @@
 ---
-title: Agrus registration
+title: Agrus cart
 showCart: false
 showMap: false
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-		
-		<!-- BEGIN registration -->
-		<div class="registration">
-			<!-- BEGIN wrapper -->
-			<div class="wrapper">
-				<h2 class="primary-title"><i class="fa fa-key" aria-hidden="true"></i>Реєстрація</h2>
-				<!-- BEGIN registration__form -->
-				<div class="registration__form">
-					
+<!-- BEGIN cart -->
+<div class="cart">
+	<!-- BEGIN wrapper -->
+	<div class="wrapper">
+		<h2 class="primary-title"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i>Кошик</h2>
 
-						<form action="#" method="get" class="primary-form">
-							<div class="registration__form-col">
-								<label for="" class="primary-label">Прізвище <sup>*</sup>
-									<input type="text" class="primary-input">
-								</label>
-								<label for="" class="primary-label">Ім’я <sup>*</sup>
-									<input type="text" class="primary-input">
-								</label>
-								<label for="" class="primary-label">E-mail <sup>*</sup>
-									<input type="email" class="primary-input">
-								</label>
-								<label for="" class="primary-label">Телефон <sup>*</sup>
-									<input type="tel" class="primary-input" placeholder="+380">
-								</label>
-							</div>
+		<table class="cart__table">
+			{# <div class="cart__head"> #}
+				<thead class="cart__head">
+					<tr>
+						<td class="first-cell"></td>
+						<td>Назва товару </td>
+						<td>Ціна за одиницю, грн</td>
+						<td>Кількість</td>
+						<td>Сума, грн</td>
+						<td class="last-cell"></td>
+					</tr>
+				</thead>
+			{# </div> #}
+			<!-- BEGIN  product -->
+			<tr class=" product">
+				<td class="product__img first-cell"><img src="img/cart-img.jpg" alt="barbar"></td>
+				<td class="product__name">Барбарис Тунберга</td>
+				<td class="product__price">50.00</td>
+				<td class="product__amount"><input type="text" name="" id="" placeholder="03"></td>
+				<td class="product__sum">150.00</td>
+				<td class="product__close last-cell"><button class="product__btn">{{mixins.icon('close')}}</button></td>
+			</tr>
+			<tr class="product__separ"><td colspan="6"></tr>
+			<!-- END  product -->
 
-							<div class="registration__form-col">
-								<label for="" class="primary-label">Адреса
-									<input type="text" class="primary-input">
-								</label>
-								<label for="" class="primary-label">Пароль <sup>*</sup>
-									<input type="password" class="primary-input">
-								</label>
-								<label for="" class="primary-label">Повторити пароль <sup>*</sup>
-									<input type="password" class="primary-input">
-								</label>
+			<!-- BEGIN  product -->
+			<tr class=" product">
+				<td class="product__img first-cell"><img src="img/cart-img.jpg" alt="barbar"></td>
+				<td class="product__name">Барбарис Тунберга</td>
+				<td class="product__price">50.00</td>
+				<td class="product__amount"><input type="text" name="" id="" placeholder="03"></td>
+				<td class="product__sum">150.00</td>
+				<td class="product__close last-cell"><button class="product__btn">{{mixins.icon('close')}}</button></td>
+			</tr>
+			<tr class="product__separ"><td colspan="6"></tr>
+			<!-- END  product -->
 
-								<button type="submit" class="primary-arrow-btn registration__submit">
-Зареєструватися</button>
-							</div>
+			<!-- BEGIN  product -->
+			<tr class=" product">
+				<td class="product__img first-cell"><img src="img/cart-img.jpg" alt="barbar"></td>
+				<td class="product__name">Барбарис Тунберга</td>
+				<td class="product__price">50.00</td>
+				<td class="product__amount"><input type="text" name="" id="" placeholder="03"></td>
+				<td class="product__sum">150.00</td>
+				<td class="product__close last-cell"><button class="product__btn">{{mixins.icon('close')}}</button></td>
+			</tr>
+			<tr class="product__separ"><td colspan="6"></tr>
+			<!-- END  product -->
+		</table>
+		<!-- BEGIN cart__all-products -->
+		<div class="cart__all-products">
 
-						</form>
-
-				</div>
-				<!-- END registration__form -->
-
+			<div class="cart__all-products_left">
+				<a href="" class="cart__link"><i class="fa fa-refresh" aria-hidden="true"></i>Перерахувати</a>
 			</div>
-			<!-- END wrapper -->
+
+			<div class="cart__all-products_center">
+				<b>Товарів: <span>4</span></b>
+			</div>
+
+			<div class="cart__all-products_right">
+				<b><span>Разом:</span> <span>600.00</span></b>
+			</div>
 
 		</div>
-		<!-- END registration -->
+		<!-- END cart__all-products -->
+		<!-- BEGIN cart__buttons -->
+		<div class="cart__buttons">
+			<button class="primary-arrow-btn cart__btn">Оформити замовлення</button>
+			<a class="cart__link cart__btn" href="#">Продовжити покупки</a>
+		</div>
+		<!-- END cart__buttons -->
+	</div>
+	<!-- END wrapper -->
 
-		{% include "partials/_recomended-products.html" %}
-
+</div>
+<!-- END cart -->
 {% endblock %}

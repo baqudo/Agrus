@@ -1,0 +1,107 @@
+.cart
+	color: #4f4e4e
+.cart__table
+	border-collapse: separate
+	width: 100%
+	margin-top: 30px 
+	td
+		text-align: center
+		vertical-align: middle
+.cart__head
+	height: 44px
+	line-height: 44px 
+	outline: 1px solid #e6e6e6
+
+.cart__all-products
+	+clr
+	text-align: right
+	margin-top: 16px 
+	line-height: 44px
+	height: 44px
+	border: 1px solid #e6e6e6
+	padding-left: 19px 
+	&_left
+		float: left
+	&_center
+		display: inline-block
+		padding-right: 20px 
+		span
+			display: inline-block
+			margin-left: 10px 
+	&_right
+		float: right
+		width: 200px 
+		border-left: 1px solid #e6e6e6
+		text-align: center
+		span
+			display: inline-block
+			margin: 0 15px
+.cart__link
+	display: inline-block
+	color: #21973f
+	font-family: Tahoma, sans-serif
+	.fa
+		margin-right: 8px 
+	&:hover
+		color: #21973f
+
+.cart__buttons
+	margin-top: 16px 
+	+clr
+.cart__btn
+	float: right
+	display: inline-block
+	line-height: 40px 
+	padding: 0
+	margin-right: 18px 
+	&:after
+		border-width: 14px
+		right: -13px 
+
+
+.first-cell
+	width: 84px 
+.last-cell
+	width: 67px 
+
+.product
+	height: 122px 
+	&__img
+		position: relative
+		img
+			+vcenter
+			max-width: 100%
+			max-height: 100%  
+	&__name
+		color: #484747
+		font-size: 16px
+		font-weight: 700
+	&__amount
+		input
+			text-align: center
+			width: 71px
+			height: 40px
+			border: 1px solid #e6e6e6
+			+placeholder-color(#484747)
+	&__close
+		position: relative
+
+	&__btn
+		width: 32px
+		height: 32px
+		background-color: transparent
+		border: none
+		transition: 0.3s
+		+vcenter
+		.icon-close
+			transition: 0.3s
+			font-size: 11px 
+			+vcenter
+		&:hover, &:focus
+			background-color: #21973f
+			.icon-close
+				fill: #fff 
+	&__separ
+		td
+		background: #e6e6e6
+		height: 1px  
