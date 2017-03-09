@@ -31,7 +31,7 @@
 				<!-- BEGIN header__search -->
 				<div class="header__search main-search">
 					<input class="main-search__area" type="search" placeholder="Пошук">
-					<button class="main-search__btn" type="submit">{{mixins.icon('search')}}</button>
+					<button class="main-search__btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
 				</div>
 				<!-- END header__search -->
 
@@ -55,7 +55,7 @@
 					<span class="shopping-cart__quantity">345,00 грн</span>
 				</div>
 
-				<a href="#" class="shopping-cart__button">{{mixins.icon('shopping-cart')}}Замовити</a>
+				<a href="#" class="shopping-cart__button"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Замовити</a>
 			</div>
 			<!-- END shopping-cart -->
 			{% endif %}
@@ -67,7 +67,7 @@
 		<div class="header__menu">
 			<ul class="menu js-menu">
 					<li class="menu__item">
-						<a href="#" class="menu__link" style="background-image: url(img/home.png);"></a>
+						<a href="#" class="menu__link"><i class="fa fa-home" aria-hidden="true"></i></a>
 					</li>
 
 				{% for test in tests.menu_list %}

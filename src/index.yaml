@@ -1,4 +1,13 @@
 ProjectTitle: agrus
 
 PageList:
-- file: index.html
+- file: homepage.html
+  ready: 100
+- file: registration.html
+  ready: 100
+- file: contacts.html
+  ready: 100
+- file: textpage.html
+  ready: 100
+- file: cart.html
+  ready: 100
