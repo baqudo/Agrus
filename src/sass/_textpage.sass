@@ -1,0 +1,39 @@
+.textpage
+	&__about
+		margin: 20px 0
+		padding-bottom: 20px 
+		color: #3e3e3e
+		font-size: 14px
+		font-weight: 400
+		line-height: 18px
+		border-bottom: 1px solid #cdcdcd
+		div
+			margin: 15px 0
+		p:before
+			content: ""
+			display: inline-block
+			width: 10px
+	&__links
+		+clr
+		margin-bottom: 80px 
+	&__link
+		color: #3e3e3e
+		line-height: 18px
+		font-family: Roboto
+		font-size: 18px
+		font-weight: 500
+		text-decoration: none
+		.fa
+			font-size: 14px
+			font-weight: 400
+			color: inherit 
+		&:hover, &:focus
+			color: #21973f
+			text-decoration: none
+		&_prev
+			.fa
+				margin-right: 10px 
+		&_next
+			float: right
+			.fa
+				margin-left: 10px 
